@@ -1,5 +1,6 @@
 from itertools import permutations 
 
+# Data Handling...
 towers = str(input("towers: "))
 
 lst = []
@@ -12,8 +13,10 @@ num=lst[0]
 max_left=lst[1]
 max_right=lst[2]
 
+# Generate all possible arrangements
 all_arranj = permutations(range(1, num+1))
 
+# For each arrangement check left and right side
 final_count=0
 for state in all_arranj:
     count_left=1
@@ -31,6 +34,7 @@ for state in all_arranj:
             right = state[k]
             count_right+=1
 
+    # If they match the desired number add to the counter
     if count_left==max_left and count_right==max_right:
         final_count+=1
 
