@@ -3,13 +3,13 @@ import heapq
 def find_median(lst):
     maxh = []
     minh = []
+
     for val in lst:
         # Initialize the data-structure and insert/push the 1st streaming value
         if not maxh and not minh:
             heapq.heappush(maxh,-val)
             median = float(val)
         elif maxh:
-
             # Insert/push the other streaming values
             if val >= -maxh[0]:
                 heapq.heappush(minh,val)
