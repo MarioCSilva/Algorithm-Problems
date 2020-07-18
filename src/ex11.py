@@ -34,13 +34,14 @@ def findAllPowers(value, size=None):
 
     return total
 
-str_input = input()
+if __name__ == "__main__":
+    str_input = input()
 
-lst = str_input.split("^")
-lst = [ int(x) for x in lst ]
+    lst = str_input.split("^")
+    lst = [ int(x) for x in lst ]
 
-value = calcPower(lst)
+    value = calcPower(lst)
 
-print(value)
+    print(value)
 
-print(findAllPowers(value))
+    print(findAllPowers(value))
